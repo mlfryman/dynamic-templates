@@ -14,6 +14,10 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+app.get('/checkers', function(req, res){
+  res.render('checkers');
+});
+
 app.listen(process.env.PORT, function(){
   console.log('Express.js is listening, on PORT', process.env.PORT);
 });

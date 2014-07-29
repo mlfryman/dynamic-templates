@@ -24,9 +24,11 @@
         <p>a not 3</p>
      <% } %>
 
-     <% var colors = ['blue', 'green', 'yellow', 'orange'] %>
+     <% var colors = ['blue', 'green', 'yellow', 'orange', 'pink', 'red', 'purple'] %>
      <% for(var i = 0; i < colors.length; i++) { %>
-     <p style = "color: <%= colors[i] %>; font-size:<%= 12 + (2 * i) %>px " > <%= colors[i] %> </p>
+     <% var bg = (colors.length - 1) === i ? 0 : i+1 %>
+     <% var fonts = ['Aclonica', 'Indie Flower', 'Bonbon'] %>
+     <p style = "color: <%= colors[i] %>; font-size:<%= 12 + (2 * i) %>px; background-color: <%= colors[bg] %>; font-family:<%= fonts[i%3] %>;" ><%= colors[i] %> </p>
      <% } %>
 
 
