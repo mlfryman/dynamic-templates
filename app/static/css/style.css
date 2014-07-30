@@ -2,22 +2,30 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 @import url(http://fonts.googleapis.com/css?family=Bonbon);
 
-body{
-}
-
-header{
+@font-face{
+  font-family: 'Strjmono';
+  src: url('https://dl.dropboxusercontent.com/u/1699691/boba-fonts_star-jedi-logo/Strjmono.ttf') format('truetype');
 }
 
 nav{
   text-align:center;
+  margin:25px;
 }
 
-h1{
+h1.star{
+  font-family: 'Strjmono';
   text-align:center;
+  font-size:50px;
+  letter-spacing:4px;
+  margin-bottom:0px;
+  margin-top:10px;
 }
 
 a{
   text-decoration:none;
+  padding:10px;
+  margin-top:0px;
+  margin-bottom:10px;
 }
 
 a:hover{
@@ -25,8 +33,59 @@ a:hover{
 }
 
 footer{
+  margin:10px;
   padding:10px;
   text-align:center;
 }
 
+table.center{
+  margin-left:auto;
+  margin-right:auto;
+  border: 5px solid black;
+  padding: 0px;
+}
+tr.tr1 td.td1 {
+  height: 70px;
+  width: 70px;
+  background-color: white;
+}
 
+tr.tr0 td.td1 {
+  height: 70px;
+  width: 70px;
+  background-color: black;
+}
+
+tr.tr1 td.td0 {
+  height: 70px;
+  width: 70px;
+  background-color: black;
+}
+
+tr.tr0 td.td0 {
+  height: 70px;
+  width: 70px;
+  background-color: white;
+}
+
+/* tie flighter */
+tr:nth-of-type(2n + 6) td.td0 {
+  background-image: url('/images/tie.png');
+  background-size: cover;
+}
+
+tr:nth-of-type(7) td.td1 {
+  background-image: url('/images/tie.png');
+  background-size: cover;
+}
+
+/* x-wing */
+tr:nth-last-of-type(2n + 6) td.td1 {
+  background-image: url('/images/xwing.png');
+  background-size: cover;
+}
+
+tr:nth-last-of-type(7) td.td0 {
+  background-image: url('/images/xwing.png');
+  background-size: cover;
+}
