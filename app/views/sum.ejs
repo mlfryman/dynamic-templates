@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sum</title>
+  </head>
+  <body>
+    <h1>Sum</h1>
+
+      <% var nums = [a, b, c, d] %>
+      <% var sum %>
+      <% for(var i = 0; i < nums.length; i++) { %>
+        <% sum += nums[i] %>
+      <% } %>
+
+      <% var colour = (sum%2) ? 'red' : 'blue' %>
+      <h2><%= a %> + <%= b %> + <%= c %> + <%= d %> = 
+        <span style="color:<%= colour %>;"><%= sum %></span>
+      </h2>
+
+      </body>
+</html>
+
