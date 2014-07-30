@@ -25,7 +25,27 @@ app.get('/add/:a/:b/:c/:d', function(req, res){
   req.params.b *= 1;
   req.params.c *= 1;
   req.params.d *= 1;
+
+  req.params.f = req.query.fontsize;
+  req.params.r = req.query.color;
+  req.params.w = req.query.borderwidth;
+
   res.render('sum', req.params);
+});
+
+app.get('/sumlist/:nums', function(req, res){
+  var nums = req.params.nums.split(',');
+
+  nums = nums.map(function(n){
+    return n * 1;
+  });
+
+  var sum = 0;
+  for(var i = 0; i < nums.length; i++){
+    sum += nums[i];
+  }
+
+  res.render('sumlist', {nums:nums, sum:sum, even:req.query.even, odd:req.query.odd});
 });
 
 var port = process.env.PORT; // creates variable to dynamically assign PORT.  

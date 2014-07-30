@@ -1,0 +1,20 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+*{
+  font-family: 'Open Sans', sans-serif;
+}
+
+table{
+  border: 1px solid grey;
+}
+
+table td{
+  border: 1px dashed grey;
+  padding: 35px;
+  font-size: 25px;
+}
+
+table tr:nth-child(even){
+  background-color: grey;
+}
+
